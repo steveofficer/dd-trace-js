@@ -669,6 +669,7 @@ class TextMapPropagator {
   _extractBaggageItems (carrier, spanContext) {
     if (!this._hasPropagationStyle('extract', 'baggage')) return
     if (!carrier?.baggage) return
+    removeAllBaggageItems()
     const baggages = carrier.baggage.split(',')
     const tagAllKeys = this._config.baggageTagKeys === '*'
     const keysToSpanTag = tagAllKeys
