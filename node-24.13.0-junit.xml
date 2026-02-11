@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.559" tests="94" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-02-11T20:04:18" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="TextMapPropagator" timestamp="2026-02-11T20:04:18" tests="0" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="inject" timestamp="2026-02-11T20:04:18" tests="25" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.000" failures="0">
+    <testcase name="TextMapPropagator inject should not crash without spanContext" time="0.000" classname="should not crash without spanContext">
+    </testcase>
+    <testcase name="TextMapPropagator inject should not crash without carrier" time="0.000" classname="should not crash without carrier">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject the span context into the carrier" time="0.001" classname="should inject the span context into the carrier">
+    </testcase>
+    <testcase name="TextMapPropagator inject should handle non-string values" time="0.001" classname="should handle non-string values">
+    </testcase>
+    <testcase name="TextMapPropagator inject should skip legacy baggage items that cannot be encoded as a valid HTTP header name" time="0.001" classname="should skip legacy baggage items that cannot be encoded as a valid HTTP header name">
+    </testcase>
+    <testcase name="TextMapPropagator inject should encode legacy baggage values that are not valid HTTP header content" time="0.000" classname="should encode legacy baggage values that are not valid HTTP header content">
+    </testcase>
+    <testcase name="TextMapPropagator inject should handle special characters in baggage" time="0.000" classname="should handle special characters in baggage">
+    </testcase>
+    <testcase name="TextMapPropagator inject should not accept special characters in baggage key" time="0.000" classname="should not accept special characters in baggage key">
+    </testcase>
+    <testcase name="TextMapPropagator inject should drop excess baggage items when there are too many pairs" time="0.000" classname="should drop excess baggage items when there are too many pairs">
+    </testcase>
+    <testcase name="TextMapPropagator inject should drop excess baggage items when the resulting baggage header contains many bytes" time="0.001" classname="should drop excess baggage items when the resulting baggage header contains many bytes">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject an existing sampling priority" time="0.000" classname="should inject an existing sampling priority">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject the origin" time="0.000" classname="should inject the origin">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject trace tags prefixed for propagation" time="0.000" classname="should inject trace tags prefixed for propagation">
+    </testcase>
+    <testcase name="TextMapPropagator inject should drop trace tags if too large" time="0.001" classname="should drop trace tags if too large">
+    </testcase>
+    <testcase name="TextMapPropagator inject should drop trace tags if value is invalid" time="0.001" classname="should drop trace tags if value is invalid">
+    </testcase>
+    <testcase name="TextMapPropagator inject should drop trace tags if key is invalid" time="0.000" classname="should drop trace tags if key is invalid">
+    </testcase>
+    <testcase name="TextMapPropagator inject should drop trace tags if disabled" time="0.000" classname="should drop trace tags if disabled">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject the trace B3 headers" time="0.000" classname="should inject the trace B3 headers">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject the 128-bit trace ID in B3 headers when available as tag" time="0.000" classname="should inject the 128-bit trace ID in B3 headers when available as tag">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject the 128-bit trace ID in B3 headers when available as ID" time="0.000" classname="should inject the 128-bit trace ID in B3 headers when available as ID">
+    </testcase>
+    <testcase name="TextMapPropagator inject should inject the traceparent header" time="0.001" classname="should inject the traceparent header">
+    </testcase>
+    <testcase name="TextMapPropagator inject should skip injection of B3 headers without the feature flag" time="0.000" classname="should skip injection of B3 headers without the feature flag">
+    </testcase>
+    <testcase name="TextMapPropagator inject should skip injection of traceparent header without the feature flag" time="0.000" classname="should skip injection of traceparent header without the feature flag">
+    </testcase>
+    <testcase name="TextMapPropagator inject should skip injection of datadog headers without the feature flag" time="0.001" classname="should skip injection of datadog headers without the feature flag">
+    </testcase>
+    <testcase name="TextMapPropagator inject should publish spanContext and carrier" time="0.001" classname="should publish spanContext and carrier">
+    </testcase>
+  </testsuite>
+  <testsuite name="baggage telemetry metrics" timestamp="2026-02-11T20:04:18" tests="3" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.015" failures="0">
+    <testcase name="TextMapPropagator inject baggage telemetry metrics should track baggage injection metric when baggage is successfully injected" time="0.000" classname="should track baggage injection metric when baggage is successfully injected">
+    </testcase>
+    <testcase name="TextMapPropagator inject baggage telemetry metrics should track truncation metric when baggage item count exceeds limit" time="0.000" classname="should track truncation metric when baggage item count exceeds limit">
+    </testcase>
+    <testcase name="TextMapPropagator inject baggage telemetry metrics should track truncation metric when baggage byte count exceeds limit" time="0.000" classname="should track truncation metric when baggage byte count exceeds limit">
+    </testcase>
+  </testsuite>
+  <testsuite name="extract" timestamp="2026-02-11T20:04:18" tests="35" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.000" failures="0">
+    <testcase name="TextMapPropagator extract should extract a span context from the carrier" time="0.001" classname="should extract a span context from the carrier">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract opentracing baggage when baggage is not a propagation style " time="0.003" classname="should extract opentracing baggage when baggage is not a propagation style ">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract otel baggage items with special characters" time="0.002" classname="should extract otel baggage items with special characters">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract baggage when the header is malformed" time="0.001" classname="should not extract baggage when the header is malformed">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract metadata properties from baggage" time="0.000" classname="should not extract metadata properties from baggage">
+    </testcase>
+    <testcase name="TextMapPropagator extract should add baggage items to span tags" time="0.009" classname="should add baggage items to span tags">
+    </testcase>
+    <testcase name="TextMapPropagator extract should discard malformed tids" time="0.000" classname="should discard malformed tids">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract baggage when it is the only propagation style" time="0.003" classname="should extract baggage when it is the only propagation style">
+    </testcase>
+    <testcase name="TextMapPropagator extract should clear pre-existing baggage items before extracting new ones" time="0.000" classname="should clear pre-existing baggage items before extracting new ones">
+    </testcase>
+    <testcase name="TextMapPropagator extract should convert signed IDs to unsigned" time="0.000" classname="should convert signed IDs to unsigned">
+    </testcase>
+    <testcase name="TextMapPropagator extract should return null if the carrier does not contain a trace" time="0.000" classname="should return null if the carrier does not contain a trace">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract a span context with a valid sampling priority" time="0.000" classname="should extract a span context with a valid sampling priority">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract the origin" time="0.000" classname="should extract the origin">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract trace tags" time="0.001" classname="should extract trace tags">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract trace tags if the value is too long" time="0.000" classname="should not extract trace tags if the value is too long">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract invalid trace tags" time="0.001" classname="should not extract invalid trace tags">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract trace tags with invalid values" time="0.000" classname="should not extract trace tags with invalid values">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract trace tags with invalid keys" time="0.000" classname="should not extract trace tags with invalid keys">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract trace tags when disabled" time="0.000" classname="should not extract trace tags when disabled">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract from an aws-sqsd header" time="0.000" classname="should extract from an aws-sqsd header">
+    </testcase>
+    <testcase name="TextMapPropagator extract should skip extraction of datadog headers without the feature flag" time="0.000" classname="should skip extraction of datadog headers without the feature flag">
+    </testcase>
+    <testcase name="TextMapPropagator extract should support prioritization" time="0.001" classname="should support prioritization">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not crash with invalid traceparent" time="0.000" classname="should not crash with invalid traceparent">
+    </testcase>
+    <testcase name="TextMapPropagator extract should always extract tracestate from tracecontext when trace IDs match" time="0.001" classname="should always extract tracestate from tracecontext when trace IDs match">
+    </testcase>
+    <testcase name="TextMapPropagator extract should extract the last datadog parent id from tracestate when p dd member is availible" time="0.000" classname="should extract the last datadog parent id from tracestate when p dd member is availible">
+    </testcase>
+    <testcase name="TextMapPropagator extract should preserve trace header tid when tracestate contains an inconsistent tid" time="0.000" classname="should preserve trace header tid when tracestate contains an inconsistent tid">
+    </testcase>
+    <testcase name="TextMapPropagator extract should preserve trace header tid when tracestate contains a malformed tid" time="0.000" classname="should preserve trace header tid when tracestate contains a malformed tid">
+    </testcase>
+    <testcase name="TextMapPropagator extract should set the last datadog parent id to zero when p: is NOT in the tracestate" time="0.000" classname="should set the last datadog parent id to zero when p: is NOT in the tracestate">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract tracestate from tracecontext when trace IDs don&apos;t match" time="0.000" classname="should not extract tracestate from tracecontext when trace IDs don&apos;t match">
+    </testcase>
+    <testcase name="TextMapPropagator extract should not extract tracestate from tracecontext when configured to extract first" time="0.000" classname="should not extract tracestate from tracecontext when configured to extract first">
+    </testcase>
+    <testcase name="TextMapPropagator extract extracts span_id from tracecontext headers and stores datadog parent-id in trace_distributed_tags" time="0.000" classname="extracts span_id from tracecontext headers and stores datadog parent-id in trace_distributed_tags">
+    </testcase>
+    <testcase name="TextMapPropagator extract extracts span_id from tracecontext headers and stores p value from tracestate in trace_distributed_tags" time="0.000" classname="extracts span_id from tracecontext headers and stores p value from tracestate in trace_distributed_tags">
+    </testcase>
+    <testcase name="TextMapPropagator extract should publish spanContext and carrier" time="0.000" classname="should publish spanContext and carrier">
+    </testcase>
+    <testcase name="TextMapPropagator extract should create span links when traces have inconsistent traceids" time="0.000" classname="should create span links when traces have inconsistent traceids">
+    </testcase>
+    <testcase name="TextMapPropagator extract should log extraction" time="0.000" classname="should log extraction">
+    </testcase>
+  </testsuite>
+  <testsuite name="baggage telemetry metrics" timestamp="2026-02-11T20:04:19" tests="2" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.010" failures="0">
+    <testcase name="TextMapPropagator extract baggage telemetry metrics should track baggage extraction metric when baggage is successfully extracted" time="0.000" classname="should track baggage extraction metric when baggage is successfully extracted">
+    </testcase>
+    <testcase name="TextMapPropagator extract baggage telemetry metrics should track malformed metric when baggage has empty key" time="0.001" classname="should track malformed metric when baggage has empty key">
+    </testcase>
+  </testsuite>
+  <testsuite name="with B3 propagation as multiple headers" timestamp="2026-02-11T20:04:19" tests="6" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.031" failures="0">
+    <testcase name="TextMapPropagator extract with B3 propagation as multiple headers should extract the headers" time="0.001" classname="should extract the headers">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as multiple headers should support unsampled traces" time="0.001" classname="should support unsampled traces">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as multiple headers should support sampled traces" time="0.001" classname="should support sampled traces">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as multiple headers should support the debug flag" time="0.001" classname="should support the debug flag">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as multiple headers should skip extraction without the feature flag" time="0.000" classname="should skip extraction without the feature flag">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as multiple headers should log extraction" time="0.000" classname="should log extraction">
+    </testcase>
+  </testsuite>
+  <testsuite name="with B3 propagation as a single header" timestamp="2026-02-11T20:04:19" tests="10" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.049" failures="0">
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should extract the header" time="0.000" classname="should extract the header">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should extract sampling" time="0.001" classname="should extract sampling">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should support the full syntax" time="0.000" classname="should support the full syntax">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should support unsampled traces" time="0.001" classname="should support unsampled traces">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should support sampled traces" time="0.000" classname="should support sampled traces">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should support the debug flag" time="0.000" classname="should support the debug flag">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should skip extraction without the feature flag" time="0.000" classname="should skip extraction without the feature flag">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should support 128-bit trace IDs" time="0.000" classname="should support 128-bit trace IDs">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should skip extracting upper bits for 64-bit trace IDs" time="0.000" classname="should skip extracting upper bits for 64-bit trace IDs">
+    </testcase>
+    <testcase name="TextMapPropagator extract with B3 propagation as a single header should log extraction" time="0.000" classname="should log extraction">
+    </testcase>
+  </testsuite>
+  <testsuite name="With traceparent propagation as single header" timestamp="2026-02-11T20:04:19" tests="10" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.054" failures="0">
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should skip extraction without the feature flag" time="0.000" classname="should skip extraction without the feature flag">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should extract the header" time="0.000" classname="should extract the header">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should extract a 128-bit trace ID" time="0.000" classname="should extract a 128-bit trace ID">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should skip extracting upper bits for 64-bit trace IDs" time="0.000" classname="should skip extracting upper bits for 64-bit trace IDs">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should propagate the version" time="0.000" classname="should propagate the version">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should propagate other vendors" time="0.000" classname="should propagate other vendors">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should propagate last datadog id" time="0.000" classname="should propagate last datadog id">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should fix _dd.p.dm if invalid (non-hyphenated) input is received" time="0.000" classname="should fix _dd.p.dm if invalid (non-hyphenated) input is received">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should maintain hyphen prefix when a default mechanism of 0 is received" time="0.000" classname="should maintain hyphen prefix when a default mechanism of 0 is received">
+    </testcase>
+    <testcase name="TextMapPropagator extract With traceparent propagation as single header should log extraction" time="0.001" classname="should log extraction">
+    </testcase>
+  </testsuite>
+  <testsuite name="tracePropagationBehaviorExtract" timestamp="2026-02-11T20:04:19" tests="3" file="/home/runner/work/dd-trace-js/dd-trace-js/packages/dd-trace/test/opentracing/propagation/text_map.spec.js" time="0.026" failures="0">
+    <testcase name="TextMapPropagator extract tracePropagationBehaviorExtract should reset span links when Trace_Propagation_Behavior_Extract is set to ignore" time="0.003" classname="should reset span links when Trace_Propagation_Behavior_Extract is set to ignore">
+    </testcase>
+    <testcase name="TextMapPropagator extract tracePropagationBehaviorExtract should set span link to extracted trace when Trace_Propagation_Behavior_Extract is set to restart" time="0.003" classname="should set span link to extracted trace when Trace_Propagation_Behavior_Extract is set to restart">
+    </testcase>
+    <testcase name="TextMapPropagator extract tracePropagationBehaviorExtract should not extract baggage when Trace_Propagation_Behavior_Extract is set to ignore" time="0.003" classname="should not extract baggage when Trace_Propagation_Behavior_Extract is set to ignore">
+    </testcase>
+  </testsuite>
+</testsuites>
